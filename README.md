@@ -1,3 +1,15 @@
+# Keycloak integration with a React app
+
+## Prerequisites
+- Keycloak installed
+  - Create a realm: myrealm
+  - Create a client: myclient
+  - Create a user: myuser
+
+## Dependencies
+- https://github.com/react-keycloak/react-keycloak/blob/master/packages/web/README.md
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
