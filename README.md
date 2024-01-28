@@ -2,13 +2,33 @@
 
 ## Prerequisites
 - Keycloak installed
+  - https://www.keycloak.org/getting-started/getting-started-docker 
+  - ```bash
+    docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.4 start-dev
+    ```
   - Create a realm: myrealm
   - Create a client: myclient
+    - set **Web origins**: http://localhost:5173
+    - set **Valid redirect URIs**: http://localhost:5173/*
+    - set **Valid post logout redirect URIs**: +
+    - set **Web origins**: http://localhost:5173
   - Create a user: myuser
+    - set **Email verified**: YES
+    - Create Credentials 
+      - Set password
+      - **Temporary**: Off
 
 ## Dependencies
 - https://github.com/react-keycloak/react-keycloak/blob/master/packages/web/README.md
 
+## Install
+
+- git clone
+- npm install
+- npm run dev
+- open browser page: http://localhost:5173/
+
+:information_source: Below is standard Readme from npm create vite app 
 
 # React + TypeScript + Vite
 
